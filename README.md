@@ -9,6 +9,13 @@
 ## Project Overview
 This project provides a comprehensive analysis of e-commerce user behavior data. The goal is to identify bottlenecks in the user journey, segment high-value users, and predict purchase intent using machine learning models.
 
+### 📊 Data Source & Quick Start
+- **Data Source:** The dataset (`events.csv`) contains simulated e-commerce user behavior logs (views, cart additions, purchases) to demonstrate the analysis pipeline. No sensitive real-world company data is included.
+- **Quick Start:**
+  1. Clone the repository.
+  2. Install dependencies using `pip install -r requirements.txt`.
+  3. Run the Jupyter Notebook `ecommerce_full_funnel_and_prediction.ipynb` to reproduce the analysis.
+
 ## Key Technical Modules
 - **Funnel Analysis:** Identified a 7.15% conversion rate from view to purchase, highlighting the "Cart to Purchase" stage as the primary bottleneck.
 - **RFM Customer Segmentation:** Performed RFM modeling to profile high-value user segments.
