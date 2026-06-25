@@ -1,2 +1,19 @@
-# E-commerce-Analysis
-E-commerce User Behavior Analysis &amp; Purchasing Intent Prediction using Python.
+# E-commerce User Behavior Analysis
+
+## Project Overview
+This project provides a comprehensive analysis of e-commerce user behavior data. The goal is to identify bottlenecks in the user journey, segment high-value users, and predict purchase intent using machine learning models.
+
+## Key Technical Modules
+- **Funnel Analysis:** Identified a 7.15% conversion rate from view to purchase, highlighting the "Cart to Purchase" stage as the primary bottleneck.
+- **RFM Customer Segmentation:** Performed RFM modeling to profile high-value user segments.
+- **Purchase Intent Prediction:** Built an XGBoost classifier to predict user purchases. Achieved a 67% accuracy rate and identified `wishlist_count` as a critical predictive feature.
+
+## Business Impact
+The analysis provides actionable insights for:
+- Optimizing conversion pathways at the checkout stage.
+- Targeted marketing strategies for different RFM segments.
+- Resource allocation based on high-impact predictive features.
+
+## Tech Stack
+- **Languages/Tools:** Python
+- **Libraries:** Pandas, Scikit-learn, XGBoost, Plotly, Seaborn
