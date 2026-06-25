@@ -8,6 +8,17 @@ This project provides a comprehensive analysis of e-commerce user behavior data.
 - **RFM Customer Segmentation:** Performed RFM modeling to profile high-value user segments.
 - **Purchase Intent Prediction:** Built an XGBoost classifier to predict user purchases. Achieved a 67% accuracy rate and identified `wishlist_count` as a critical predictive feature.
 
+## Visualization Highlights
+
+**1. Conversion Funnel**
+![Conversion Funnel](output_3_0.png)
+
+**2. Feature Importance (XGBoost)**
+![Feature Importance](output_5_1.png)
+
+**3. Activity vs. Revenue Correlation**
+![Correlation](output_6_0.png)
+
 ## Business Impact
 The analysis provides actionable insights for:
 - Optimizing conversion pathways at the checkout stage.
@@ -15,5 +26,5 @@ The analysis provides actionable insights for:
 - Resource allocation based on high-impact predictive features.
 
 ## Tech Stack
-- **Languages/Tools:** Python
+- **Languages:** Python
 - **Libraries:** Pandas, Scikit-learn, XGBoost, Plotly, Seaborn
