@@ -35,6 +35,7 @@ The analysis provides actionable insights for:
 - **Libraries:** Pandas, Scikit-learn, XGBoost, Plotly, Seaborn
 
 ## Future Improvements
+- **Address Class Imbalance (Model Limitation):** The current XGBoost model yields an overall accuracy of 67%, but exhibits a low recall (0.02) for the minority class (purchasers). In future iterations, techniques like SMOTE (Synthetic Minority Over-sampling Technique) or adjusting the `scale_pos_weight` parameter will be implemented to improve the model's sensitivity in predicting actual purchase events.
+- **Causal Inference via A/B Testing:** The current Chi-Square test relies on observational data, which proves correlation but not strict causation between `wishlist_count` and purchases. In a real-world business setting, I would design a randomized A/B test (e.g., hiding the wishlist feature for the control group) to rigorously quantify the incremental causal impact of this feature on the final conversion rate.
 - **Data Enrichment:** Integrate user demographic data to further refine RFM segments.
-- **Model Tuning:** Implement hyperparameter optimization (e.g., using GridSearchCV or Optuna) to improve the prediction accuracy of the XGBoost model.
-- **Real-time Pipeline:** Explore the feasibility of a real-time event stream processing pipeline for faster business insights., XGBoost, Plotly, Seaborn
+- **Model Tuning:** Implement hyperparameter optimization (e.g., using GridSearchCV or Optuna) to improve prediction metrics.
