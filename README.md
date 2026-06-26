@@ -41,8 +41,13 @@ The analysis provides actionable insights for:
 - **Languages:** Python
 - **Libraries:** Pandas, Scikit-learn, XGBoost, Plotly, Seaborn
 
+## Model Optimization: Handling Class Imbalance
+In the initial XGBoost model, severe class imbalance (non-purchasers heavily outnumbering purchasers) led to a high overall accuracy (67%) but a critically low recall (0.02) for the minority class. 
+
+To resolve this, I implemented **Cost-Sensitive Learning** by calculating the exact class ratio and passing it to the `scale_pos_weight` parameter. 
+- **Business Impact:** The recall for actual purchasers skyrocketed from **2% to 50%**. While this slightly reduced the global accuracy to 51%, it perfectly aligns with the real-world business objective: capturing as many potential buyers as possible is far more valuable than correctly identifying non-buyers.
+
 ## Future Improvements
-- **Address Class Imbalance (Model Limitation):** The current XGBoost model yields an overall accuracy of 67%, but exhibits a low recall (0.02) for the minority class (purchasers). In future iterations, techniques like SMOTE (Synthetic Minority Over-sampling Technique) or adjusting the `scale_pos_weight` parameter will be implemented to improve the model's sensitivity in predicting actual purchase events.
-- **Causal Inference via A/B Testing:** The current Chi-Square test relies on observational data, which proves correlation but not strict causation between `wishlist_count` and purchases. In a real-world business setting, I would design a randomized A/B test (e.g., hiding the wishlist feature for the control group) to rigorously quantify the incremental causal impact of this feature on the final conversion rate.
+- **Causal Inference via A/B Testing:** The current Chi-Square test relies on observational data, which proves correlation but not strict causation between `wishlist_count` and purchases. In a real-world business setting, I would design a randomized A/B test (e.g., hiding the wishlist feature for the control group) to rigorously quantify the incremental causal impact.
 - **Data Enrichment:** Integrate user demographic data to further refine RFM segments.
 - **Model Tuning:** Implement hyperparameter optimization (e.g., using GridSearchCV or Optuna) to improve prediction metrics.
