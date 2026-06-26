@@ -5,7 +5,9 @@
 - [Visualization Highlights](#visualization-highlights)
 - [Business Impact](#business-impact)
 - [Tech Stack](#tech-stack)
+- [Model Optimization: Handling Class Imbalance](#model-optimization-handling-class-imbalance)
 - [Future Improvements](#future-improvements)
+
 ## Project Overview
 This project provides a comprehensive analysis of e-commerce user behavior data. The goal is to identify bottlenecks in the user journey, segment high-value users, and predict purchase intent using machine learning models.
 
